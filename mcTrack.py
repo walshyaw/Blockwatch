@@ -176,7 +176,7 @@ async def java_setup(interaction):
 
             await status.edit(embed=embed)
 
-        await asyncio.sleep(10)
+        await asyncio.sleep(30)
 
 
 # BEDROCK EDITION SETUP
