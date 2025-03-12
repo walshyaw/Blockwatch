@@ -157,7 +157,7 @@ async def java_setup(interaction):
         # OFFLINE
         else:
             embed = discord.Embed(
-                title=f"{logs[motd]}",
+                title="Unknown Server",
                 description="**Offline:** 🟥",
                 colour=0xD61F23,
                 timestamp=datetime.now(),
@@ -262,7 +262,7 @@ async def bedrock_setup(interaction):
         # OFFLINE
         else:
             embed = discord.Embed(
-                title=f"{logs[motd]}",
+                title="Unknown Server",
                 description="**Offline:** 🟥",
                 colour=0xD61F23,
                 timestamp=datetime.now(),
