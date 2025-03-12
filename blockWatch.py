@@ -128,6 +128,7 @@ async def java_setup(interaction):
         data = response.text
         logs = json.loads(data)
 
+        # ONLINE
         if logs["online"]:
 
             motd = str(logs["motd"]["clean"]).strip("['']")
@@ -153,6 +154,7 @@ async def java_setup(interaction):
 
             await status.edit(embed=embed)
 
+        # OFFLINE
         else:
             embed = discord.Embed(
                 title=f"{logs[motd]}",
@@ -231,6 +233,7 @@ async def bedrock_setup(interaction):
         data = response.text
         logs = json.loads(data)
 
+        # ONLINE
         if logs["online"]:
 
             motd = str(logs["motd"]["clean"]).strip("['']")
@@ -256,6 +259,7 @@ async def bedrock_setup(interaction):
 
             await status.edit(embed=embed)
 
+        # OFFLINE
         else:
             embed = discord.Embed(
                 title=f"{logs[motd]}",
