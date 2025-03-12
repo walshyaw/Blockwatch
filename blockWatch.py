@@ -6,7 +6,6 @@
 
 import discord, os
 from discord.ext import commands
-from discord import app_commands
 from discord.ui import Button, View
 from dotenv import load_dotenv
 import json
