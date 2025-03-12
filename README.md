@@ -50,6 +50,12 @@ Allocate proper Bot privileges in the Discord Developer Portal
   • Use Embedded Activities
 ```
 
+Find your bot's API key and paste it into the .env file.
+
+```bash
+  DISCORD_TOKEN=YOUR_API_KEY
+```
+
 Start the bot
 
 ```bash
