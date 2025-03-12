@@ -50,7 +50,7 @@ Allocate proper Bot privileges in the Discord Developer Portal
   • Use Embedded Activities
 ```
 
-Start the server
+Start the bot
 
 ```bash
   python .\blockWatch.py
