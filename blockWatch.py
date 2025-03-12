@@ -117,7 +117,7 @@ async def java_setup(interaction):
         "clipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83d5a7dfa76147"
         "7af3a442c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
     )
-    status = await interaction.followup.send(embed=server_embed)
+    status = await interaction.channel.send(embed=server_embed)
     await asyncio.sleep(4)
 
     # LOOP TO CONTINUOUSLY PING THE SERVER FOR IT'S STATUS
@@ -222,7 +222,7 @@ async def bedrock_setup(interaction):
         "clipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83d5a7dfa76147"
         "7af3a442c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
     )
-    status = await interaction.followup.send(embed=server_embed)
+    status = await interaction.channel.send(embed=server_embed)
     await asyncio.sleep(4)
 
     # LOOP TO CONTINUOUSLY PING THE SERVER FOR IT'S STATUS
