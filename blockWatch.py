@@ -285,13 +285,7 @@ async def bedrock_setup(interaction):
 # START THE BOT
 @client.event
 async def on_ready():
-
-    # FOR LOOP USED TO LOOP THROUGH ALL THE SERVERS THE BOT IS IN AND SYNC THE COMMANDS TO EACH ONE.
-    print()
-    for guild in client.guilds:
-        await client.tree.sync(guild=discord.Object(id=guild.id))
-        print(f"Commands synced for guild: {guild.name} (ID: {guild.id})")
-
+    await client.tree.sync()
     print(f"Logged in as {client.user}")
 
 
