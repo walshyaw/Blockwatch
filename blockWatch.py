@@ -1,8 +1,5 @@
-#
-#
-#
-#
-#
+# @WALSHYAW | https://github.com/walshyaw/
+# Created on 03/12/2025. Last modified on 03/12/2025.
 
 import discord, os
 from discord.ext import commands
