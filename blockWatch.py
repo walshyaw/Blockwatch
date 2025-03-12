@@ -1,8 +1,12 @@
-# WALSHYAW // https://github.com/walshyaw/
-# Created on 03/12/2025. Last modified on 03/12/2025.
+#
+#
+#
+#
+#
 
 import discord, os
 from discord.ext import commands
+from discord import app_commands
 from discord.ui import Button, View
 from dotenv import load_dotenv
 import json
@@ -31,7 +35,7 @@ async def mcsetup(interaction):
 
     # SETUP EMBED
     embed = discord.Embed(
-        title="MCTrack Server Status Setup",
+        title="Blockwatch Server Status Setup",
         colour=0x1ADB28,
         description="Please select the version of Minecraft"
         " that your server is currently running.",
@@ -77,7 +81,7 @@ async def java_setup(interaction):
 
     # FIRST SETUP EMBED
     embed = discord.Embed(
-        title="MCTrack Server Status Setup",
+        title="Blockwatch Server Status Setup",
         description="Please enter your server's IP Address below.",
         colour=0x1ADB28,
     )
@@ -180,7 +184,7 @@ async def bedrock_setup(interaction):
 
     # FIRST SETUP EMBED
     embed = discord.Embed(
-        title="MCTrack Server Status Setup",
+        title="Blockwatch Server Status Setup",
         description="Please enter your server's IP Address below.",
         colour=0x1ADB28,
     )
