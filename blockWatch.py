@@ -31,20 +31,22 @@ async def mcsetup(interaction):
 
     # SETUP EMBED
     embed = discord.Embed(
-        title="Blockwatch Server Status Setup",
-        colour=0x1ADB28,
-        description="Please select the version of Minecraft"
-        " that your server is currently running.",
+        title="Blockwatch | Setup Panel",
+        description="Please select the version of Minecraft that your server is running. Blockwatch supports Java and Bedrock servers on versions 1.7+.",
+        colour=0x72FA7C,
     )
 
-    embed.set_author(name="@walshyaw", url="https://github.com/walshyaw")
-
-    embed.set_footer(
-        text="Built by @walshyaw | 2025",
-        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com"
-        "%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83d5a7dfa761477af3a442c"
-        "3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
+    embed.set_author(
+        name="Blockwatch",
+        url="https://github.com/walshyaw",
+        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=9a79845d4044a6c22ec383f4058dcd63000a0e6ee534112de86770ca42299ec4&ipo=images",
     )
+
+    embed.set_thumbnail(
+        url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2Fa4%2F85%2F7fa485a49e92979b2abc2518485b95fc.jpg&f=1&nofb=1&ipt=f9ae67232e006c4b55f5c4d0435a51ff4c59af4645c3ec27b71bd9738cce200c&ipo=images"
+    )
+
+    embed.set_footer(text="Built by @walshyaw | 2025")
 
     # SETUP BUTTONS
     bedrock = Button(
@@ -77,19 +79,22 @@ async def java_setup(interaction):
 
     # FIRST SETUP EMBED
     embed = discord.Embed(
-        title="Blockwatch Server Status Setup",
-        description="Please enter your server's IP Address below.",
-        colour=0x1ADB28,
+        title="Blockwatch | Server Address",
+        description="Please provide the IP Address for your server. The port may be needed as well, it just depends on the server.",
+        colour=0x72FA7C,
     )
 
-    embed.set_author(name="@walshyaw", url="https://github.com/walshyaw")
-
-    embed.set_footer(
-        text="Built by @walshyaw | 2025",
-        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F"
-        "clipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83"
-        "d5a7dfa761477af3a442c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
+    embed.set_author(
+        name="Blockwatch",
+        url="https://github.com/walshyaw",
+        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=9a79845d4044a6c22ec383f4058dcd63000a0e6ee534112de86770ca42299ec4&ipo=images",
     )
+
+    embed.set_thumbnail(
+        url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2Fa4%2F85%2F7fa485a49e92979b2abc2518485b95fc.jpg&f=1&nofb=1&ipt=f9ae67232e006c4b55f5c4d0435a51ff4c59af4645c3ec27b71bd9738cce200c&ipo=images"
+    )
+
+    embed.set_footer(text="Built by @walshyaw | 2025")
     await interaction.response.send_message(embed=embed)
     java_embed = await interaction.original_response()
 
@@ -108,15 +113,22 @@ async def java_setup(interaction):
 
     # SERVER STATUS PANEL EMBED
     server_embed = discord.Embed(
-        title="PINGING SERVER...", colour=0x1ADB28, timestamp=datetime.now()
+        title="Blockwatch | Pinging Server...",
+        description="Loading server information...",
+        colour=0x72FA7C,
     )
-    server_embed.set_author(name="@walshyaw", url="https://github.com/walshyaw")
-    server_embed.set_footer(
-        text="Built by @walshyaw | 2025",
-        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F"
-        "clipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83d5a7dfa76147"
-        "7af3a442c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
+
+    server_embed.set_author(
+        name="Blockwatch",
+        url="https://github.com/walshyaw",
+        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=9a79845d4044a6c22ec383f4058dcd63000a0e6ee534112de86770ca42299ec4&ipo=images",
     )
+
+    server_embed.set_thumbnail(
+        url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2Fa4%2F85%2F7fa485a49e92979b2abc2518485b95fc.jpg&f=1&nofb=1&ipt=f9ae67232e006c4b55f5c4d0435a51ff4c59af4645c3ec27b71bd9738cce200c&ipo=images"
+    )
+
+    server_embed.set_footer(text="Built by @walshyaw | 2025")
     status = await interaction.channel.send(embed=server_embed)
     await asyncio.sleep(4)
 
@@ -134,43 +146,54 @@ async def java_setup(interaction):
             motd = str(logs["motd"]["clean"]).strip("['']")
 
             embed = discord.Embed(
-                title=f"{motd}",
-                description=f"""
-                      **Online: 🟩**\n\n
-                      **Version**: *{logs["protocol"]["name"]}*\n\n
-                      **Players:** *{logs["players"]["online"]} / {logs["players"]["max"]}*""",
-                colour=0x1ADB28,
-                timestamp=datetime.now(),
+                title="Blockwatch | Server Information",
+                description="**Current Status:**  🟩"
+                "\n**Title:** "
+                f"{motd}"
+                ""
+                "\n\n**Version**: *"
+                f"{logs["protocol"]["name"]}*"
+                ""
+                "\n**Players**: *"
+                f"{logs["players"]["online"]} / {logs["players"]["max"]}*"
+                "\n**IP Address**: "
+                f"{SERVER_IP}",
+                colour=0x72FA7C,
             )
 
-            embed.set_author(name="@walshyaw", url="https://github.com/walshyaw")
-
-            embed.set_footer(
-                text="Built by @walshyaw | 2025",
-                icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com"
-                "%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83d5a7dfa761477af3a442"
-                "c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
+            embed.set_author(
+                name="Blockwatch",
+                url="https://github.com/walshyaw",
+                icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=9a79845d4044a6c22ec383f4058dcd63000a0e6ee534112de86770ca42299ec4&ipo=images",
             )
+
+            embed.set_thumbnail(
+                url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2Fa4%2F85%2F7fa485a49e92979b2abc2518485b95fc.jpg&f=1&nofb=1&ipt=f9ae67232e006c4b55f5c4d0435a51ff4c59af4645c3ec27b71bd9738cce200c&ipo=images"
+            )
+
+            embed.set_footer(text="Built by @walshyaw | 2025")
 
             await status.edit(embed=embed)
 
         # OFFLINE
         else:
             embed = discord.Embed(
-                title="Unknown Server",
-                description="**Offline:** 🟥",
-                colour=0xD61F23,
-                timestamp=datetime.now(),
+                title="Blockwatch | Server Information",
+                description="Current Status: " "🟥\n\nIP Address: " f"{logs["ip"]}",
+                colour=0xFD0D00,
             )
 
-            embed.set_author(name="@walshyaw", url="https://github.com/walshyaw")
-
-            embed.set_footer(
-                text="Built by @walshyaw | 2025",
-                icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com"
-                "%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83d5a7dfa761477af3a442"
-                "c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
+            embed.set_author(
+                name="Blockwatch",
+                url="https://github.com/walshyaw",
+                icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=9a79845d4044a6c22ec383f4058dcd63000a0e6ee534112de86770ca42299ec4&ipo=images",
             )
+
+            embed.set_thumbnail(
+                url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2Fa4%2F85%2F7fa485a49e92979b2abc2518485b95fc.jpg&f=1&nofb=1&ipt=f9ae67232e006c4b55f5c4d0435a51ff4c59af4645c3ec27b71bd9738cce200c&ipo=images"
+            )
+
+            embed.set_footer(text="Built by @walshyaw | 2025")
 
             await status.edit(embed=embed)
 
@@ -182,19 +205,22 @@ async def bedrock_setup(interaction):
 
     # FIRST SETUP EMBED
     embed = discord.Embed(
-        title="Blockwatch Server Status Setup",
-        description="Please enter your server's IP Address below.",
-        colour=0x1ADB28,
+        title="Blockwatch | Server Address",
+        description="Please provide the IP Address for your server. The port may be needed as well, it just depends on the server.",
+        colour=0x72FA7C,
     )
 
-    embed.set_author(name="@walshyaw", url="https://github.com/walshyaw")
-
-    embed.set_footer(
-        text="Built by @walshyaw | 2025",
-        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F"
-        "clipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83"
-        "d5a7dfa761477af3a442c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
+    embed.set_author(
+        name="Blockwatch",
+        url="https://github.com/walshyaw",
+        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=9a79845d4044a6c22ec383f4058dcd63000a0e6ee534112de86770ca42299ec4&ipo=images",
     )
+
+    embed.set_thumbnail(
+        url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2Fa4%2F85%2F7fa485a49e92979b2abc2518485b95fc.jpg&f=1&nofb=1&ipt=f9ae67232e006c4b55f5c4d0435a51ff4c59af4645c3ec27b71bd9738cce200c&ipo=images"
+    )
+
+    embed.set_footer(text="Built by @walshyaw | 2025")
     await interaction.response.send_message(embed=embed)
     bedrock_embed = await interaction.original_response()
 
@@ -213,15 +239,22 @@ async def bedrock_setup(interaction):
 
     # SERVER STATUS PANEL EMBED
     server_embed = discord.Embed(
-        title="PINGING SERVER...", colour=0x1ADB28, timestamp=datetime.now()
+        title="Blockwatch | Pinging Server...",
+        description="Loading server information...",
+        colour=0x72FA7C,
     )
-    server_embed.set_author(name="@walshyaw", url="https://github.com/walshyaw")
-    server_embed.set_footer(
-        text="Built by @walshyaw | 2025",
-        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F"
-        "clipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83d5a7dfa76147"
-        "7af3a442c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
+
+    server_embed.set_author(
+        name="Blockwatch",
+        url="https://github.com/walshyaw",
+        icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=9a79845d4044a6c22ec383f4058dcd63000a0e6ee534112de86770ca42299ec4&ipo=images",
     )
+
+    server_embed.set_thumbnail(
+        url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2Fa4%2F85%2F7fa485a49e92979b2abc2518485b95fc.jpg&f=1&nofb=1&ipt=f9ae67232e006c4b55f5c4d0435a51ff4c59af4645c3ec27b71bd9738cce200c&ipo=images"
+    )
+
+    server_embed.set_footer(text="Built by @walshyaw | 2025")
     status = await interaction.channel.send(embed=server_embed)
     await asyncio.sleep(4)
 
@@ -239,43 +272,54 @@ async def bedrock_setup(interaction):
             motd = str(logs["motd"]["clean"]).strip("['']")
 
             embed = discord.Embed(
-                title=f"{motd}",
-                description=f"""
-                      **Online: 🟩**\n\n
-                      **Version**: *{logs["protocol"]["name"]}*\n\n
-                      **Players:** *{logs["players"]["online"]} / {logs["players"]["max"]}*""",
-                colour=0x1ADB28,
-                timestamp=datetime.now(),
+                title="Blockwatch | Server Information",
+                description="**Current Status:**  🟩"
+                "\n**Title:** "
+                f"{motd}"
+                ""
+                "\n\n**Version**: *"
+                f"{logs["protocol"]["name"]}*"
+                ""
+                "\n**Players**: *"
+                f"{logs["players"]["online"]} / {logs["players"]["max"]}*"
+                "\n**IP Address**: "
+                f"{SERVER_IP}",
+                colour=0x72FA7C,
             )
 
-            embed.set_author(name="@walshyaw", url="https://github.com/walshyaw")
-
-            embed.set_footer(
-                text="Built by @walshyaw | 2025",
-                icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com"
-                "%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83d5a7dfa761477af3a442"
-                "c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
+            embed.set_author(
+                name="Blockwatch",
+                url="https://github.com/walshyaw",
+                icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=9a79845d4044a6c22ec383f4058dcd63000a0e6ee534112de86770ca42299ec4&ipo=images",
             )
+
+            embed.set_thumbnail(
+                url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2Fa4%2F85%2F7fa485a49e92979b2abc2518485b95fc.jpg&f=1&nofb=1&ipt=f9ae67232e006c4b55f5c4d0435a51ff4c59af4645c3ec27b71bd9738cce200c&ipo=images"
+            )
+
+            embed.set_footer(text="Built by @walshyaw | 2025")
 
             await status.edit(embed=embed)
 
         # OFFLINE
         else:
             embed = discord.Embed(
-                title="Unknown Server",
-                description="**Offline:** 🟥",
-                colour=0xD61F23,
-                timestamp=datetime.now(),
+                title="Blockwatch | Server Information",
+                description="Current Status: " "🟥\n\nIP Address: " f"{logs["ip"]}",
+                colour=0xFD0D00,
             )
 
-            embed.set_author(name="@walshyaw", url="https://github.com/walshyaw")
-
-            embed.set_footer(
-                text="Built by @walshyaw | 2025",
-                icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com"
-                "%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=a6fbb15173bb83d5a7dfa761477af3a442"
-                "c3ce1adcabe38371df9c6ad9eb1f22&ipo=images",
+            embed.set_author(
+                name="Blockwatch",
+                url="https://github.com/walshyaw",
+                icon_url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartcraft.com%2Fimages%2Fminecraft-logo-png-2.png&f=1&nofb=1&ipt=9a79845d4044a6c22ec383f4058dcd63000a0e6ee534112de86770ca42299ec4&ipo=images",
             )
+
+            embed.set_thumbnail(
+                url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2Fa4%2F85%2F7fa485a49e92979b2abc2518485b95fc.jpg&f=1&nofb=1&ipt=f9ae67232e006c4b55f5c4d0435a51ff4c59af4645c3ec27b71bd9738cce200c&ipo=images"
+            )
+
+            embed.set_footer(text="Built by @walshyaw | 2025")
 
             await status.edit(embed=embed)
 
